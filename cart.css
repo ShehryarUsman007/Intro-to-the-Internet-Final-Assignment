@@ -1,0 +1,160 @@
+.qtybtn {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+}
+
+.qtybtn:hover {
+    background-color: #e0e0e0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: rgb(51, 51, 51);
+    background-color: rgb(250, 250, 250);
+    padding: 20px;
+}
+
+header {
+    background-color: rgb(10, 37, 64);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    color: rgb(255, 255, 255);
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navlinks {
+    display: flex;
+    list-style: none;
+}
+
+.navlinks a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.navlinks a:hover {
+    color: rgb(0, 193, 181);
+}
+
+.cartcontainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+th {
+    background-color: rgb(10, 37, 64);
+    color: rgb(255, 255, 255);
+}
+
+.paymentnote {
+    font-style: italic;
+    color: rgb(102, 102, 102);
+    margin: 1rem 0;
+}
+
+.btn {
+    background-color: rgb(10, 37, 64);
+    color: rgb(255, 255, 255);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: rgb(0, 193, 181);
+}
+
+.hidden {
+    display: none;
+}
+
+.confirmbox {
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.deliveryaddress {
+    font-weight: bold;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: rgb(240, 240, 240);
+    border-radius: 4px;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid rgb(200, 200, 200);
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-weight: bold;
+}
+
+.formgroup {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}

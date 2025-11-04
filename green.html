@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Jersey | The 90th Minute</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <header>
+        <nav>
+			<!-- Navigation links at top of the page -->
+            <a href="home.html" class="logo">The 90th Minute</a>
+            <ul class="navlinks">
+                <li><a href="home.html">🏠 Home</a></li>
+                <li><a href="blue.html">🔵 Blue Kit</a></li>
+                <li><a href="red.html">🔴 Red Kit</a></li>
+                <li><a href="green.html">🟢 Green Kit</a></li>
+                <li><a href="cart.html">🛒 Cart</a></li>
+                <li><a href="refs.html">📚 References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="product">
+        <h1>Green Modern Jersey</h1>
+        <!-- Image gallery and thumbnail selector -->
+        <section class="gallery">
+            <figure class="mainview">
+                <img src="green_design1_L.png" alt="Green jersey design 1" id="mainimage" width="600" height="600">
+            </figure>
+            <figure class="thumbnails">
+                <div class="thumb">
+                    <a href="javascript:void(0)" onclick="changeImage('green_design1_L.png', 'Green jersey design 1', 'Design 1')">
+                        <img src="green_design1_thumb.png" alt="Design 1 thumbnail" width="100" height="100">
+                    </a>
+                    <span>Design 1</span>
+                </div>
+                <div class="thumb">
+                    <a href="javascript:void(0)" onclick="changeImage('green_design2_L.png', 'Green jersey design 2', 'Design 2')">
+                        <img src="green_design2_thumb.png" alt="Design 2 thumbnail" width="100" height="100">
+                    </a>
+                    <span>Design 2</span>
+                </div>
+            </figure>
+        </section>
+        <!-- Product description -->
+        <article class="description">
+            <h3>Product Details</h3>
+            <ul>
+                <li>100% recycled polyester</li>
+                <li>Eco-friendly materials</li>
+                <li>Lightweight and breathable</li>
+                <li>Two unique design options</li>
+            </ul>
+        </article>
+        <!-- Product options -->
+        <section class="details">
+            <p class="price">$79.99</p>
+            
+            <form class="addtocart" id="addToCartForm">
+                <fieldset>
+                    <legend>Select Options</legend>
+                    <input type="hidden" id="design" name="design" value="Design 1">
+                    <div class="gender-select">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select</option>
+                            <option value="M">Men's</option>
+                            <option value="W">Women's</option>
+                        </select>
+                    </div>
+                    <p>
+                        <label for="size">Size:</label>
+                        <select id="size" name="size" required>
+                            <option value="">Select size</option>
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                        </select>
+                    </p>
+                    
+                    <button type="submit" class="btn">Add to Cart</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+	<!-- Add to cart confirmation pop up -->
+    <div id="addedToCartPopup" class="popup hidden">
+        <p>Added to cart!</p>
+    </div>
+	<!-- copyright logo for the bottom of the page -->
+    <footer>
+        <p>&copy; <span class="year">2025</span> The 90th Minute. Educational use only.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.year').textContent = new Date().getFullYear();
+        // Function to change main product image
+        function changeImage(src, altText, designName) {
+            var mainImg = document.getElementById('mainimage');
+            mainImg.src = src;
+            mainImg.alt = altText;
+            document.getElementById('design').value = designName;
+        }
+		// Add to cart functionality
+        document.getElementById('addToCartForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Product details for shopping cart
+            var productName = document.querySelector('h1').textContent;
+            var design = document.getElementById('design').value;
+            var size = document.getElementById('size').value;
+            var gender = document.getElementById('gender').value;
+            var price = parseFloat(document.querySelector('.price').textContent.replace('$', ''));
+            
+            var item = {
+                id: new Date().getTime(),
+                name: productName,
+                design: design,
+                size: size,
+                gender: gender,
+                price: price,
+                quantity: 1
+            };
+            // Adding to cart in storage
+            var cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(item);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            // Show popup after adding to cart
+            var popup = document.getElementById('addedToCartPopup');
+            popup.classList.remove('hidden');
+            setTimeout(function() {
+                popup.classList.add('hidden');
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

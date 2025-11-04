@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | The 90th Minute</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <nav>
+			<!-- Navigation links at top of the page -->
+            <a href="home.html" class="logo">The 90th Minute</a>
+            <ul class="navlinks">
+                <li><a href="home.html">🏠 Home</a></li>
+                <li><a href="blue.html">🔵 Blue Kit</a></li>
+                <li><a href="red.html">🔴 Red Kit</a></li>
+                <li><a href="green.html">🟢 Green Kit</a></li>
+                <li><a href="cart.html">🛒 Cart</a></li>
+                <li><a href="refs.html">📚 References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>The 90th Minute</h1>
+        <p>Soccer jersey design showcase</p>
+    </section>
+
+	<!-- Showcasing three jeserys. One of each colour -->
+    <section class="products">
+        <h2>Featured Jerseys</h2>
+        <section class="grid">
+            <article class="card">
+                <figure class="imagebox">
+                    <a href="blue.html">
+                        <img src="blue_design1_M.png" alt="Blue soccer jersey design 1" width="400" height="400">
+                    </a>
+                </figure>
+                <section class="infobox">
+                    <h3><a href="blue.html">Blue Stripe Jersey</a></h3>
+                    <p class="price">$89.99</p>
+                    <a href="blue.html" class="btn">View Designs</a>
+                </section>
+            </article>
+            
+            <article class="card">
+                <figure class="imagebox">
+                    <a href="red.html">
+                        <img src="red_design1_M.png" alt="Red soccer jersey design 1" width="400" height="400">
+                    </a>
+                </figure>
+                <section class="infobox">
+                    <h3><a href="red.html">Red Classic Jersey</a></h3>
+                    <p class="price">$84.99</p>
+                    <a href="red.html" class="btn">View Designs</a>
+                </section>
+            </article>
+            
+            <article class="card">
+                <figure class="imagebox">
+                    <a href="green.html">
+                        <img src="green_design1_M.png" alt="Green soccer jersey design 1" width="400" height="400">
+                    </a>
+                </figure>
+                <section class="infobox">
+                    <h3><a href="green.html">Green Modern Jersey</a></h3>
+                    <p class="price">$79.99</p>
+                    <a href="green.html" class="btn">View Designs</a>
+                </section>
+            </article>
+        </section>
+    </section>
+
+    <section class="about">
+        <h3>About This Collection</h3>
+        <p>Explore our vibrant selection of <b>soccer jersey designs</b> featuring <i>multiple design options</i> for each color.</p>
+        
+        <hr>
+        
+        <h4>Collection Highlights</h4>
+        <ul>
+            <li>100% polyester material</li>
+            <li>Moisture-wicking technology</li>
+            <li>Multiple design options per color</li>
+        </ul>
+    </section>
+
+	<!-- copyright logo for the bottom of the page -->
+    <footer>
+        <p>&copy; <span class="year">2025</span> The 90th Minute</p>
+    </footer>
+
+    <script>
+        document.querySelector('.year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
