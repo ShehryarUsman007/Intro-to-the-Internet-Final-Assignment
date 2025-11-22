@@ -1,1 +1,1 @@
-Open home.html
+Open home.html after downloading
